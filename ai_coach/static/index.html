@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Coach</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Persona picker -->
+    <section id="picker-view">
+      <header class="hero">
+        <h1>AI Coach</h1>
+        <p>Pick a coach and start the conversation.</p>
+        <span id="mode-badge" class="badge" hidden>demo mode — no API key</span>
+      </header>
+      <div id="persona-list" class="persona-grid"></div>
+    </section>
+
+    <!-- Chat view -->
+    <section id="chat-view" hidden>
+      <header class="chat-header">
+        <button id="back-btn" title="Choose another coach">&larr;</button>
+        <div class="chat-title">
+          <span id="chat-emoji"></span>
+          <div>
+            <strong id="chat-name"></strong>
+            <small id="chat-tagline"></small>
+          </div>
+        </div>
+        <span id="chat-mode-badge" class="badge" hidden>demo</span>
+      </header>
+
+      <div id="messages"></div>
+
+      <form id="chat-form">
+        <input id="chat-input" type="text" autocomplete="off"
+               placeholder="Type your message…" maxlength="4000">
+        <button id="send-btn" type="submit">Send</button>
+      </form>
+    </section>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
